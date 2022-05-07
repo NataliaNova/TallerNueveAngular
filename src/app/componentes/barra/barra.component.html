@@ -1,0 +1,29 @@
+<p>
+  <mat-toolbar class="barra">
+    <button
+      mat-icon-button
+      [matMenuTriggerFor]="menu"
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="Calculadora">Calculadora</button>
+      <button mat-menu-item routerLink="Formulario">Donaciones</button>
+      <button mat-menu-item routerLink="Date">Agenda tu cita</button>
+    </mat-menu>
+
+    <span>Noveno Taller NatNov </span>
+    <span class="example-spacer"></span>
+
+    <button
+      routerLink="Inicio"
+      mat-icon-button
+      class="example-icon favorite-icon"
+      aria-label="Example icon-button with heart icon"
+    >
+      <mat-icon>favorite</mat-icon>
+    </button>
+  </mat-toolbar>
+</p>

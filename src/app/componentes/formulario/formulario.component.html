@@ -1,0 +1,90 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <p class="h3 text-success">
+        Realiza tu donación <i class="bi bi-cash-coin"></i>
+      </p>
+
+      <div *ngIf="mensaje_falta">
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          role="alert"
+        >
+          <strong
+            >{{ mensaje_falta }} <i class="bi bi-x-circle-fill"></i
+          ></strong>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="alert"
+            aria-label="Close"
+          ></button>
+        </div>
+      </div>
+
+      <div *ngIf="mensaje_donacion">
+        <div
+          class="alert alert-primary alert-dismissible fade show"
+          role="alert"
+        >
+          <strong
+            >{{ mensaje_donacion }} <i class="bi bi-balloon-heart-fill"></i
+          ></strong>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="alert"
+            aria-label="Close"
+          ></button>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <label for=""><strong>Primer y segundo Nombre</strong> </label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="nombres"
+          [(ngModel)]="nombres"
+        />
+      </div>
+    </div>
+    <div class="col-12">
+      <label for=""><strong>Primer y segundo Apellido</strong> </label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="apellidos"
+        [(ngModel)]="apellidos"
+      />
+    </div>
+    <div class="col-6">
+      <label for=""
+        ><strong>Ciudad desde donde realizas la donación</strong>
+      </label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="ciudad"
+        [(ngModel)]="ciudad"
+      />
+    </div>
+    <div class="col-6">
+      <label for=""><strong>Digita tu Edad</strong> </label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="edad"
+        [(ngModel)]="edad"
+      />
+    </div>
+    <div class="col-12 text-center">
+      <input
+        type="Button"
+        value="Enviar donación"
+        class="btn btn-success m-3"
+        (click)="enviar()"
+      />
+    </div>
+  </div>
+</div>
